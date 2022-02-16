@@ -5,8 +5,15 @@ module.exports = {
     tags: ['Projects'],
     description: 'New Projects',
     operationId: 'newProjects',
+    requestBody: {
+      content: {
+        'application/json': {
+          schema: schema.postSchame
+        }
+      }
+    },
     responses: {
-      200: {
+      201: {
         description: 'Create a Proyect',
         content: {
           'application/json': {

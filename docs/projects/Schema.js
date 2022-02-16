@@ -6,11 +6,12 @@ const id = {
 const name = {
   type: 'string',
   description: 'Project name',
-  example: 'new Prject'
+  example: 'new Project'
 }
 const description = {
   type: 'string',
-  description: 'Is description Test'
+  description: 'Is description Test',
+  example: 'new description'
 }
 
 const proyectexample = [
@@ -28,14 +29,17 @@ const proyectexample = [
 
 const managerId = {
   type: 'number',
+  description: 'Is Id User',
   example: '2'
 }
 const assignedId = {
   type: 'number',
+  description: 'Is Id User',
   example: '2'
 }
 const status = {
   type: 'boolean',
+  description: 'True or False',
   example: true
 }
 
@@ -48,6 +52,16 @@ const updatedAt = {
   example: '2022-02-07T11:05:33.000Z'
 }
 module.exports = {
+  postSchame: {
+    type: 'object',
+    properties: {
+      name,
+      description,
+      managerId,
+      assignedId,
+      status
+    }
+  },
   createSchame: {
     type: 'object',
     properties: {

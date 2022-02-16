@@ -17,6 +17,13 @@ module.exports = {
         description: 'Id to Project'
       }
     ],
+    requestBody: {
+      content: {
+        'application/json': {
+          schema: schema.postSchame
+        }
+      }
+    },
     responses: {
       200: {
         description: 'Update a selected Project',
